@@ -1,0 +1,98 @@
+//   reset browser css
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+// color variable declarations
+$footer-bg-color: rgb(11, 6, 48);
+$text-whight: #fff;
+$t_center: center;
+
+.main-body{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}
+.flexbox{
+    background-color: cadetblue;
+    padding: 20px 10px;
+}
+.tanvir1{
+    flex: 1;
+    background-color: chocolate;
+}
+.tanvir2{
+    flex: 2;
+}
+.tanvir3{
+    flex: 1;
+    background-color: chocolate;
+}
+
+footer{
+    background: $footer-bg-color;
+    color: $text-whight;
+    text-align: $t_center;
+    padding: 10px;
+    letter-spacing: 23px;
+}
+
+// import and partials
+@import "nav";
+
+
+.main-body1{
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.virza{
+    border: none;
+    padding: 10px 30px;
+    text-align: center;
+    border-radius: 3px;
+    margin:20px auto;
+    cursor: pointer;
+}
+
+.vir{
+    @extend .virza;
+}
+.za{
+    @extend .virza;
+    background: chartreuse;
+}
+
+// condition of scss 
+
+@mixin setFonSize($value) {
+    @if $value == small {
+        font-size: 8px;
+    }@else if $value == medium {
+        font-size: 16px;
+    }@else if $value == large {
+        font-size: 30px;
+    }@else {
+        font-size: none;
+    }
+    
+}
+
+.main-body1 .tanvir3{
+   @include setFonSize(medium);
+}
+
+// mixin & include
+@mixin main-body1 {
+    background: cornflowerblue;
+    font-size: 20px;
+    text-align: center;
+    padding: 40px 10px;
+}
+.main-body1 .tanvir2{
+    @include main-body1;
+}
+

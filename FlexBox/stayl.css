@@ -1,0 +1,144 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.number{
+    color: #fff;
+    font-size: 50px;
+}
+.zavir{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+    background: gray;
+    flex-direction: row-reverse;
+    /* align-items: flex-start; */
+    /* align-items: center; */
+    /* flex-direction: column; */
+}
+
+.virza{
+    /* width: 30% !important; */
+    flex-basis: 20%;
+    /* background: red; */
+    border: 1px solid #000;
+    padding: 20px;
+}
+.vir-1{
+    /* flex:1; */
+    background: #c0c300;
+}
+.vir-2{
+    /* flex:2; */
+    flex-basis: 40%;
+    background: #ffcedd;
+}
+.vir-3{
+    /* flex:1; */
+    background: #439208;
+}
+.wraper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.item {
+    background: #bd6f1d;
+    padding: 20px;
+    border: 4px solid #6ec71c;
+    width: 80px;
+    margin: 5px;
+    text-align: center;
+}
+/*=============
+For responsive CSS3 Start Now >--->
+ ==============*/
+/* Medium Layout 1280px */
+@media only screen and (min-width:992px) and (max-width:1200px){ } 
+/* Tablet Layout: 768px */
+@media only screen and (min-width:768px) and (max-width:991px){
+    .zavir{
+        flex-direction: row-reverse;
+        
+    }
+ }
+/* Mobile Layout 320px */
+@media only screen and (max-width:767px){ 
+    .zavir{
+        flex-direction: column;
+    }
+ }
+/* Wide Mobile Layout 480px */
+@media only screen and (min-width:480px) and (max-width:766px){
+    .zavir{
+        flex-direction: column-reverse;
+    }
+} 
+/*=================
+<---End---> responsive CSS3
+ ===================*/
+
+ .recent_post .elementor-posts-container {
+    display: flex;
+}
+.recent_post article.elementor-post {
+    display: flex;
+}
+.recent_post article a img {
+    width: 100px !important;
+    height: 81px !important;
+}
+
+/* _________________________ */
+
+/* blog detals right side bar resen post */
+.recent_post .elementor-posts-container {
+    display: flex;
+    flex-direction: column;
+}
+.recent_post .elementor-post__text {
+    margin-left: 12px;
+}
+.recent_post a.elementor-post__thumbnail__link img {
+    height: 100px;
+}
+.recent_post article.elementor-post {
+    margin-bottom: -20px;
+}
+.recent_post .elementor-posts--thumbnail-top .elementor-post {
+    display: inline-flex;
+}
+
+.item:nth-child(2n+1) {
+    background: rebeccapurple;
+}
+.item:nth-child(even) h2 {
+    color: red;
+}
+.item:nth-child(odd) {
+    border-color: #0c7728;
+}
+
+
+/* 
+body {
+    overflow: hidden;
+}
+
+
+.elementor-section-wrap {
+    overflow: hidden;
+}
+
+.header_top {
+    overflow: hidden !important;
+}
+#header-top {
+    overflow: hidden !important;
+}
+
+.fa, .fab, .fad, .fal, .far, .fas {
+    font-family: "Font Awesome 5 Free";
+} */

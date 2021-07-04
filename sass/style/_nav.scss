@@ -1,0 +1,65 @@
+
+// scss nasting 
+header{
+    h1{
+        text-align: center;
+        margin: 20px auto;
+    }
+    nav{
+        position: relative;
+        z-index: 1;
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: $t_center;
+            li{
+                padding: 10px 0;
+                display: table;
+                a{
+                    text-decoration: none;
+                    color: $footer-bg-color;
+                    padding: 10px 20px;
+                    font-size: 18px;
+                    font-family: 'lato';
+                    font-weight: bold;
+                    transition: .7s;
+                }
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    background: gold;
+                    transform: scaleY(100px);
+                    opacity: 0;
+                    visibility: hidden;
+                    margin-top: 11px;
+                }
+            }
+            li.active{
+                background-color: crimson;
+                a{
+                    color: $text-whight;
+                }
+            }
+            li:hover{
+                background: crimson;
+                transition: .5s;
+                color: $text-whight;
+                ul{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+    nav:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 43px;
+        content: "";
+        background: chocolate;
+        z-index: -1;
+    }
+    
+}
